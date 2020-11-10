@@ -1,0 +1,167 @@
+/* feuille de style css*/
+
+/*----polices----*/
+@font-face {
+    font-family: 'quadrantaregular';
+    src: url('../font/quadranta-regular-webfont.eot');
+    src: url('../font/quadranta-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/quadranta-regular-webfont.woff2') format('woff2'),
+         url('../font/quadranta-regular-webfont.woff') format('woff'),
+         url('../font/quadranta-regular-webfont.ttf') format('truetype'),
+         url('../font/quadranta-regular-webfont.svg#quadrantaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'quadrantabold';
+    src: url('../font/quadranta-bold-webfont.eot');
+    src: url('../font/quadranta-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/quadranta-bold-webfont.woff2') format('woff2'),
+         url('../font/quadranta-bold-webfont.woff') format('woff'),
+         url('../font/quadranta-bold-webfont.ttf') format('truetype'),
+         url('../font/quadranta-bold-webfont.svg#quadrantabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*---disposition gle/default + background*/
+body{
+	font-family: quadrantaregular,Arial,serif;
+    background: url(../img/fond.png) ; 
+    color: rgb(71, 69, 71);
+}
+
+/*----ref couleur----
+nom				rgb					ref
+orange			rgb(249,182,39)		O1	
+bleu-moyen		rgb(7,108,158)		B0
+vert-bleu		rgb(27,124,121)		B1
+bleu-vert		rgb(9,112,135)		B2
+violet			rgb(89,4,135)		V1
+mauve			rgb(126, 97, 143)   M1
+chocolat        rgb(210,105,30)     C01
+*/
+
+/*----container----*/
+#container{
+    display: flex;
+}
+
+/*liserai*/
+#liserai {
+    width: 10%;
+    min-width: 5px;
+    background-image: url(../img/neg.jpg);
+    background-color: rgb(27,124,121);/*B1*/
+    border: rgb(27,124,121) .1em solid;
+    opacity: .55; 
+    margin: .3em;
+    margin-right: 1em;
+    border-radius: 1em;
+  
+}
+
+/*----bloc page----*/
+#bloc_page {
+    flex: 1;
+}
+
+/*----entete----*/
+header{
+	text-align:center;
+    color: rgb(9,112,135);
+    display: flex;
+}
+header h1 {
+    text-shadow: 0.05em 0.05em rgb(249,182,39);/*O1*/
+}
+#element_titre{
+    flex:1;
+}
+
+/*----photo----*/
+.photo{
+	border: 0.2em rgb(9,112,135) double;/*B2*/
+	border-radius: 0.5em;
+    box-shadow: 1em 1em 2em rgb(27,124,121)	;/*B1*/
+    margin-right: .3em;
+}
+
+/*----corps----*/
+#corps{
+    display: flex;
+}
+
+/*----sections - sous titre - paragraphes----*/
+section{
+    margin: .2em;
+}
+#experiences{
+   flex:1.5;
+}
+#competences{
+   flex:1.1;
+}
+#formations{
+    flex:1;
+}
+section h1{
+	color: rgb(249,182,39);/*O1*/
+}
+strong{
+	color: rgb(9,112,135);/*B2*/
+}
+
+/*----mes liens----*/
+a{
+	color: rgb(7,108,158);/*B0*/
+}
+a:hover{
+	color: rgb(89,4,135);/*V1*/
+    font-size: 1.3em;
+    text-decoration-style: double;
+    font-weight: bolder;
+}
+a:visited{
+	color: rgb(126, 97, 143);/*M1*/
+}
+
+/*footer*/
+footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    color: rgb(9,112,135);
+}
+footer p{
+    margin-top: .5em
+}
+.coffee {
+    display: flex;
+    margin: .5em;
+}
+#zic_ctrl1 {
+    border: rgb(27,124,121) .3em solid;
+    border-radius: .5em;
+}
+
+
+/*----responsive----*/
+@media screen and (max-width: 1024px)
+{
+    #corps{
+        flex-direction: column;
+    }
+    #liserai{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px)
+{
+   header{
+       flex-direction: column;
+   }
+}
